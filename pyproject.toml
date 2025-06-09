@@ -1,16 +1,10 @@
-[tool.poetry]
+[project]
 name = "hello-docling"
 version = "0.1.0"
-description = "hello-docling"
-authors = ["Your Name <you@example.com>"]
+description = "Add your description here"
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.12"
-
-[tool.poetry.group.dev.dependencies]
-docling = "^1.8.5"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires-python = ">=3.11.8"
+dependencies = [
+    "docling>=2.36.1",
+    "mlx-vlm>=0.1.27",
+]
