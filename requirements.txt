@@ -1,2 +1,2 @@
-docling
-mlx-vlm
+docling>=2.113.0
+mlx-vlm>=0.1.27

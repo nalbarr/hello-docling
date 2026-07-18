@@ -140,6 +140,9 @@ venv.bak/
 # mkdocs documentation
 /site
 
+# hello-docling generated output
+/scratch/
+
 # mypy
 .mypy_cache/
 .dmypy.json
