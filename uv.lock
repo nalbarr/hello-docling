@@ -755,6 +755,7 @@ source = { editable = "." }
 dependencies = [
     { name = "docling" },
     { name = "mlx-vlm" },
+    { name = "python-dotenv" },
 ]
 
 [package.dev-dependencies]
@@ -766,6 +767,7 @@ dev = [
 requires-dist = [
     { name = "docling", specifier = ">=2.113.0" },
     { name = "mlx-vlm", specifier = ">=0.1.27" },
+    { name = "python-dotenv", specifier = ">=1.0.0" },
 ]
 
 [package.metadata.requires-dev]

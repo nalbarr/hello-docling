@@ -7,15 +7,21 @@ Concise usage reference for `hello-docling`. For docling itself, see the
 
 ```
 uv sync
+make init-env
 ```
 
 Requires Python `>=3.11.8` (see `.python-version`) and [uv](https://docs.astral.sh/uv/).
+
+`main.py` reads its source from the `DOCLING_SOURCE_URL` env var (loaded from
+`.env`, gitignored). `.env.example` is checked in with a working default —
+edit `.env` to point at a different PDF/URL.
 
 ## Common commands
 
 | Command | What it does |
 |---|---|
-| `make run` | Runs `src/hello_docling/main.py` — converts a hardcoded URL to markdown, prints to stdout. |
+| `make init-env` | Copies `.env.example` to `.env`, overwriting any existing `.env`. |
+| `make run` | Runs `src/hello_docling/main.py` — converts the PDF/URL from `DOCLING_SOURCE_URL` (see `.env`) to markdown, prints to stdout. |
 | `make run-custom` | Runs `src/hello_docling/custom.py` — builds a `DocumentConverter` with an explicit format allow-list and EasyOCR-backed PDF pipeline, converts `inputs/2408.09869v5.pdf`, writes markdown to `scratch/`. |
 | `make test` | Runs the pytest suite (`tests/`). |
 | `make clean` | Removes `scratch/` (generated output). Runs automatically before `run`/`run-custom`. |
