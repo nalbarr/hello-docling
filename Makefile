@@ -1,4 +1,5 @@
 help:
+	@echo make init-env
 	@echo make run
 	@echo make run-custom
 	@echo make test
@@ -7,6 +8,9 @@ help:
 	@echo make docling-run
 	@echo make docling-show-plugins
 	@echo make docling-pipeline-vlm
+
+init-env:
+	cp .env.example .env
 
 run: clean
 	uv run python -m hello_docling.main
